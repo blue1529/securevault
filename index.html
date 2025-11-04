@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Secure Vault Password Manager - A simple and secure password manager built with HTML, CSS, and JavaScript. Store and manage your passwords locally in your browser.">
+    <meta name="keywords" content="Password Manager, Secure Vault, HTML, CSS, JavaScript, Local Storage, Web App, Password Security">
+    <meta name="author" content="Newton Kalulu">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Secure Vault Password Manager</title>
+</head>
+<!-- This is the home page -->
+<body class="flex">    <!-- Header / Sidebar -->
+    <header class="fixed top-0 left-0 h-screen z-30">
+
+    <!-- Hidden checkbox (peer) -->
+    <input id="menu-toggle" type="checkbox" class="peer sr-only">
+    <!-- Top bar for mobile: shows title + hamburger -->
+    <div class="md:hidden flex items-center justify-between peer-checked:bg-blue-800 text-white p-4">
+        
+        <!-- label toggles the checkbox -->
+        <label for="menu-toggle" class="text-3xl cursor-pointer select-none">☰</label>
+    </div>
+
+    <!-- Sidebar / nav -->
+    <!-- hidden on small screens unless peer (checkbox) is checked; always visible on md+ -->
+    <nav class="bg-blue-900 text-white w-64 min-h-screen
+                hidden peer-checked:block md:block
+                transition-all duration-500 z-30">
+        <div class="p-6 md:pt-10">
+            <h2 class="font-bold text-3xl mb-10 relative top-0 left-0 flex items-center justify-between">Secure Vault</h2>
+            <!-- Menu elements -->
+        <ul class="flex flex-col space-y-4">
+            <li class="border-t border-black pt-2"><a href="/index.html" class="px-3 block hover:text-blue-200">Home</a></li>
+            <li class="border-t border-black pt-2"><a href="/passwords.html" class="px-3 block hover:text-blue-200">Passwords</a></li>
+            <li class="border-t border-b border-black py-3"><a href="/contact.html" class="px-3 block hover:text-blue-200">Contact</a></li>
+        </ul>
+
+        <!-- New password button -->
+        <div class="mt-6">
+            <button id="openFormBtn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                + Add New Password
+            </button>
+        </div>
+        <!-- Footer -->
+        <footer class="absolute bottom-4 left-6 text-sm">By Newton Kalulu | <a href="/privacy.html" class="underline">Privacy Policy</a>
+        </footer>
+        </div>
+    </nav>
+</header>
+<!-- Main Section containing the Introduction to the page -->
+<main class="grow ml-0 md:ml-64 p-6 bg-gray-900 min-h-screen">
+    <div class="max-w-3xl mx-auto pt-20">
+            <h1 class="text-4xl md:text-5xl font-bold text-center text-pretty mb-0 md:mb-20 text-white mt-10">
+                🔒Secure Vault Password Manager (Demo)
+            </h1>
+            <p class="text-center p-10 mb-0 md:mb-20 text-gray-400">Welcome to Secure Vault Password Manager, your secure space for managing passwords</p>
+            <p class="text-center p-10 mb-0 md:mb-20 font-bold text-red-400">Note: This is just a display project. Do not store real passwords here</p>
+    <div class="mx-auto my-auto max-w-7xl px-6 lg:px-8">
+        <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+        <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+            <dt class="text-base/7 text-gray-400">Data breaches</dt>
+            <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">0</dd>
+        </div>
+        <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+            <dt class="text-base/7 text-gray-400">Passwords Stored</dt>
+            <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">1.2 million</dd>
+        </div>
+        <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+            <dt class="text-base/7 text-gray-400">New users annually</dt>
+            <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">46,000</dd>
+        </div>
+        </dl>
+    </div>
+    <div class="text-center mt-20 pb-30">
+        <a href="/passwords.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+            Get Started
+        </a>
+    </div>  
+</main>
+</body>
+</html>
